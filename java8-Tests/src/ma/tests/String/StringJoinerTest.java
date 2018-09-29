@@ -25,7 +25,7 @@ public class StringJoinerTest {
 		sj.add("26");
 		result = sj.toString(); // prefix-2016/02/26-suffix
 		System.out.println(result);
-
+  
 		// 2015-10-31
 		System.out.println(String.join("-", "2015", "10", "31"));
 
