@@ -5,6 +5,7 @@ import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.function.Function;
 import java.util.stream.Collectors;
 
 import ma.beans.lambdas.Developer;
@@ -14,7 +15,7 @@ public class MapTest {
 	public static void main(String[] args) {
 		List<String> alpha = Arrays.asList("a", "b", "c", "d");
 
-		alpha = alpha.stream().map(n -> n + "2").collect(Collectors.toList());
+		alpha = alpha.stream().map(Function.identity()).collect(Collectors.toList());
 		
 		List<Developer> devlopers = alpha.stream().map(name -> { Developer dev = new Developer(name);
 		                                                          return dev;}).collect(Collectors.toList());
@@ -45,5 +46,12 @@ public class MapTest {
         
         System.out.println("Sorted...");
         System.out.println(result);
+        
+     // Convert to stream and test it
+	 boolean reslt = alpha.stream().anyMatch("a"::equals);
+
+    	if (reslt) {
+    		System.out.println("Hello a");
+    	}
 	}
 }

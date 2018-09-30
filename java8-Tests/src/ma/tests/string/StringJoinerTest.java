@@ -1,4 +1,4 @@
-package ma.tests.String;
+package ma.tests.string;
 
 import java.util.ArrayList;
 import java.util.Arrays;
