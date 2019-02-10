@@ -10,7 +10,7 @@ public class ParallelStream {
 		
 		List<String> lst  = new ArrayList<String>();
 		
-		for(int i=0; i<10000000;i++) {
+		for(int i=0; i<100;i++) {
 			
 		 lst.add("Mounaim"+i);
 		}

@@ -56,4 +56,9 @@ public class PrimitiveStream {
 	    });
 	}
 
+	public static String print(String  s) {
+		
+		System.out.println(s);
+		return s+"0";
+	}
 }
