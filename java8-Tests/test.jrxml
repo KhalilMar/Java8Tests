@@ -1,0 +1,388 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="FicheMigration" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="49025f91-9446-4d81-93d4-c511fa9c9d63">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<property name="com.jaspersoft.studio.unit." value="cm"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="cm"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="cm"/>
+	<property name="net.sf.jasperreports.awt.ignore.missing.font" value="true"/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="cm"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="cm"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="cm"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="cm"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="cm"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="cm"/>
+	<property name="ireport.zoom" value="1.0000000000000009"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Title" fontName="Arial" fontSize="12" isBold="true" pdfFontName="Helvetica-Bold"/>
+	<style name="SubTitle" forecolor="#666666" fontName="Arial" fontSize="12"/>
+	<style name="Column header" forecolor="#666666" fontName="Arial" fontSize="10" isBold="true"/>
+	<style name="detail" fontName="Arial" fontSize="10"/>
+	<style name="label" fontName="Arial" fontSize="11" isBold="true"/>
+	<parameter name="date" class="java.util.Date"/>
+	<parameter name="myDateFormat" class="java.text.SimpleDateFormat"/>
+	<parameter name="bean" class="com.socgen.etece.app.export.bean.PdfFicheAboBean"/>
+	<parameter name="partenaire" class="com.socgen.etece.metier.domaine.partenaire.Partenaire"/>
+	<parameter name="aboete" class="com.socgen.etece.metier.domaine.aboete.Aboete"/>
+	<parameter name="contactClientList" class="java.util.Collection"/>
+	<parameter name="contactBanqueList" class="java.util.Collection"/>
+	<parameter name="aboNatfluList" class="java.util.Collection"/>
+	<parameter name="signataireList" class="java.util.Collection"/>
+	<parameter name="utilisateurList" class="java.util.Collection"/>
+	<parameter name="contactClientReport" class="net.sf.jasperreports.engine.JasperReport"/>
+	<parameter name="contactBankReport" class="net.sf.jasperreports.engine.JasperReport"/>
+	<parameter name="natureFluxReport" class="net.sf.jasperreports.engine.JasperReport"/>
+	<parameter name="page2Report" class="net.sf.jasperreports.engine.JasperReport"/>
+	<parameter name="utilisateurReport" class="net.sf.jasperreports.engine.JasperReport"/>
+	<parameter name="signataireReport" class="net.sf.jasperreports.engine.JasperReport"/>
+	<parameter name="demand" class="com.socgen.etece.metier.domaine.demand.Demand"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="demand" class="com.socgen.etece.metier.domaine.demand.Demand">
+		<fieldDescription><![CDATA[demand]]></fieldDescription>
+	</field>
+	<field name="aboete" class="com.socgen.etece.metier.domaine.aboete.Aboete">
+		<fieldDescription><![CDATA[aboete]]></fieldDescription>
+	</field>
+	<field name="partenaire" class="com.socgen.etece.metier.domaine.partenaire.Partenaire">
+		<fieldDescription><![CDATA[partenaire]]></fieldDescription>
+	</field>
+	<field name="remettantContactFluAgregat" class="java.util.List">
+		<fieldDescription><![CDATA[remettantContactFluAgregat]]></fieldDescription>
+	</field>
+	<field name="libelleStatut" class="java.lang.String">
+		<fieldDescription><![CDATA[libelleStatut]]></fieldDescription>
+	</field>
+	<field name="natureFlux" class="java.util.List">
+		<fieldDescription><![CDATA[natureFlux]]></fieldDescription>
+	</field>
+	<field name="aboFtp" class="java.lang.Boolean">
+		<fieldDescription><![CDATA[aboFtp]]></fieldDescription>
+	</field>
+	<field name="signataires" class="java.util.List">
+		<fieldDescription><![CDATA[signataires]]></fieldDescription>
+	</field>
+	<field name="contactsBanque" class="java.util.List">
+		<fieldDescription><![CDATA[contactsBanque]]></fieldDescription>
+	</field>
+	<field name="statutDemLib" class="java.lang.String">
+		<fieldDescription><![CDATA[statutDemLib]]></fieldDescription>
+	</field>
+	<field name="contactsClient" class="java.util.List">
+		<fieldDescription><![CDATA[contactsClient]]></fieldDescription>
+	</field>
+	<field name="chiffrement" class="java.lang.Boolean">
+		<fieldDescription><![CDATA[chiffrement]]></fieldDescription>
+	</field>
+	<field name="demand_1" class="com.socgen.etece.metier.domaine.demand.Demand">
+		<fieldDescription><![CDATA[demand]]></fieldDescription>
+	</field>
+	<field name="aboete_1" class="com.socgen.etece.metier.domaine.aboete.Aboete">
+		<fieldDescription><![CDATA[aboete]]></fieldDescription>
+	</field>
+	<field name="partenaire_1" class="com.socgen.etece.metier.domaine.partenaire.Partenaire">
+		<fieldDescription><![CDATA[partenaire]]></fieldDescription>
+	</field>
+	<field name="remettantContactFluAgregat_1" class="java.util.List">
+		<fieldDescription><![CDATA[remettantContactFluAgregat]]></fieldDescription>
+	</field>
+	<field name="libelleStatut_1" class="java.lang.String">
+		<fieldDescription><![CDATA[libelleStatut]]></fieldDescription>
+	</field>
+	<field name="natureFlux_1" class="java.util.List">
+		<fieldDescription><![CDATA[natureFlux]]></fieldDescription>
+	</field>
+	<field name="aboFtp_1" class="java.lang.Boolean">
+		<fieldDescription><![CDATA[aboFtp]]></fieldDescription>
+	</field>
+	<field name="signataires_1" class="java.util.List">
+		<fieldDescription><![CDATA[signataires]]></fieldDescription>
+	</field>
+	<field name="contactsBanque_1" class="java.util.List">
+		<fieldDescription><![CDATA[contactsBanque]]></fieldDescription>
+	</field>
+	<field name="statutDemLib_1" class="java.lang.String">
+		<fieldDescription><![CDATA[statutDemLib]]></fieldDescription>
+	</field>
+	<field name="contactsClient_1" class="java.util.List">
+		<fieldDescription><![CDATA[contactsClient]]></fieldDescription>
+	</field>
+	<field name="chiffrement_1" class="java.lang.Boolean">
+		<fieldDescription><![CDATA[chiffrement]]></fieldDescription>
+	</field>
+	<field name="demand_2" class="com.socgen.etece.metier.domaine.demand.Demand">
+		<fieldDescription><![CDATA[demand]]></fieldDescription>
+	</field>
+	<field name="aboete_2" class="com.socgen.etece.metier.domaine.aboete.Aboete">
+		<fieldDescription><![CDATA[aboete]]></fieldDescription>
+	</field>
+	<field name="partenaire_2" class="com.socgen.etece.metier.domaine.partenaire.Partenaire">
+		<fieldDescription><![CDATA[partenaire]]></fieldDescription>
+	</field>
+	<field name="remettantContactFluAgregat_2" class="java.util.List">
+		<fieldDescription><![CDATA[remettantContactFluAgregat]]></fieldDescription>
+	</field>
+	<field name="libelleStatut_2" class="java.lang.String">
+		<fieldDescription><![CDATA[libelleStatut]]></fieldDescription>
+	</field>
+	<field name="natureFlux_2" class="java.util.List">
+		<fieldDescription><![CDATA[natureFlux]]></fieldDescription>
+	</field>
+	<field name="aboFtp_2" class="java.lang.Boolean">
+		<fieldDescription><![CDATA[aboFtp]]></fieldDescription>
+	</field>
+	<field name="signataires_2" class="java.util.List">
+		<fieldDescription><![CDATA[signataires]]></fieldDescription>
+	</field>
+	<field name="contactsBanque_2" class="java.util.List">
+		<fieldDescription><![CDATA[contactsBanque]]></fieldDescription>
+	</field>
+	<field name="statutDemLib_2" class="java.lang.String">
+		<fieldDescription><![CDATA[statutDemLib]]></fieldDescription>
+	</field>
+	<field name="contactsClient_2" class="java.util.List">
+		<fieldDescription><![CDATA[contactsClient]]></fieldDescription>
+	</field>
+	<field name="chiffrement_2" class="java.lang.Boolean">
+		<fieldDescription><![CDATA[chiffrement]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="165" splitType="Stretch">
+			<rectangle>
+				<reportElement uuid="8ee50c22-91ee-4af0-af5c-8cc9573e35f2" x="0" y="51" width="555" height="95" backcolor="#C0C0C0"/>
+			</rectangle>
+			<staticText>
+				<reportElement uuid="14bba55e-fd0b-4d5c-a843-78f40ddaf8a5" style="Title" x="0" y="0" width="555" height="25"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[INFORMATIONS A DESTINATION DES CCM ET DES GESTIONNAIRES]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="2b1ca124-0b9b-43f7-a7bb-29d45ae293b8" style="SubTitle" x="261" y="11" width="272" height="15">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{myDateFormat}.format($P{date})]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="d43c7a69-8fec-40ba-94cc-03415871c1e2" style="label" x="0" y="50" width="120" height="15"/>
+				<textElement>
+					<paragraph leftIndent="1"/>
+				</textElement>
+				<text><![CDATA[Raison sociale:]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="e5055e70-7e3d-44d8-93bb-8f3233bf52f4" style="detail" x="175" y="50" width="378" height="15"/>
+				<textElement>
+					<font fontName="Arial"/>
+					<paragraph leftIndent="1"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{aboete}.getTx_rspart()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="d5f3a9ea-7bab-4670-b1ad-34cbd9b40dd5" style="label" x="0" y="65" width="65" height="15"/>
+				<textElement>
+					<paragraph leftIndent="1"/>
+				</textElement>
+				<text><![CDATA[NÂ° RCT]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="0bc302ae-3384-4240-9671-41399a4112d5" style="detail" x="175" y="65" width="231" height="15"/>
+				<textElement>
+					<paragraph leftIndent="1"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{aboete}.getTx_idpart()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="f94c190f-3527-44e1-929e-e61aa8e2cb18" style="label" x="0" y="80" width="120" height="15"/>
+				<textElement>
+					<paragraph leftIndent="1"/>
+				</textElement>
+				<text><![CDATA[Adresse:]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="47d936e1-f103-485e-a2a6-9de7e8f0199c" style="detail" stretchType="RelativeToTallestObject" x="175" y="80" width="378" height="15"/>
+				<textElement>
+					<paragraph leftIndent="1"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{aboete}.getTx_adr1part() + " " + $P{aboete}.getTx_villepart()]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="b6409aec-51b7-4ff8-b407-d85f5759943d" style="detail" x="175" y="95" width="378" height="15"/>
+				<textElement>
+					<paragraph leftIndent="1"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{aboete}.getTx_adr2part()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="95090f26-8f41-41e0-83e1-c6134e265142" style="label" x="0" y="131" width="140" height="15"/>
+				<textElement>
+					<paragraph leftIndent="1"/>
+				</textElement>
+				<text><![CDATA[EntitÃ© contractante :]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="0e23120c-f489-4db7-91d4-6dbb665fdb3f" style="detail" x="175" y="130" width="148" height="15"/>
+				<textElement>
+					<paragraph leftIndent="1"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{aboete}.getTx_agence()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="29561ba5-4c38-49c6-90f8-74df1a9a3c64" style="label" x="0" y="150" width="90" height="15"/>
+				<textElement>
+					<paragraph leftIndent="1"/>
+				</textElement>
+				<text><![CDATA[Abonnement:]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="93c9c6ce-db59-4c5a-a371-2436335f6ca7" style="detail" x="90" y="150" width="160" height="15"/>
+				<textElement>
+					<paragraph leftIndent="1"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{aboete}.getId_abo()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="bed3bf10-f81c-458e-85ed-e0346abebd7a" x="0" y="25" width="555" height="15"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[GENERALITES]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="c930f6d4-0473-4ee9-9e5e-85567953963f" style="detail" x="175" y="110" width="231" height="15"/>
+				<textElement>
+					<paragraph leftIndent="1"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{bean}.getStatutDemLib()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="e53e1b65-60ea-4424-94c8-c199c7054011" style="label" x="334" y="130" width="60" height="15">
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<paragraph leftIndent="1"/>
+				</textElement>
+				<text><![CDATA[Code BIC:]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="3c75820f-28bd-4f54-8489-ade0ea4da9ec" style="detail" x="394" y="131" width="139" height="15"/>
+				<textElement>
+					<paragraph leftIndent="1"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{aboete}.getCd_bic()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="27cb0533-b361-45bf-8081-32fcea78be05" style="label" x="45" y="65" width="130" height="15"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+					<paragraph leftIndent="1"/>
+				</textElement>
+				<text><![CDATA[(ou SIRET ou id international):]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="d0a3c139-651e-45fb-bdac-bd09fde6f8dc" style="label" x="0" y="110" width="166" height="15"/>
+				<textElement>
+					<paragraph leftIndent="1"/>
+				</textElement>
+				<text><![CDATA[Statut de l'abonnement:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="dea65197-ab73-496f-8f44-4a9ba2b5aaa0" style="Title" x="148" y="11" width="113" height="15"/>
+				<textElement textAlignment="Right">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[EN DATE DU: ]]></text>
+			</staticText>
+		</band>
+	</title>
+	<detail>
+		<band height="40" splitType="Stretch">
+			<subreport isUsingCache="false" runToBottom="false">
+				<reportElement uuid="de69bcd1-9762-4e08-873b-758710d06c83" x="0" y="10" width="555" height="30" isRemoveLineWhenBlank="true"/>
+				<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource($P{contactClientList})]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{contactClientReport}]]></subreportExpression>
+			</subreport>
+		</band>
+		<band height="45" splitType="Stretch">
+			<subreport isUsingCache="false" runToBottom="false">
+				<reportElement uuid="de69bcd1-9762-4e08-873b-758710d06c83" x="0" y="15" width="555" height="30" isRemoveLineWhenBlank="true"/>
+				<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource($P{contactBanqueList})]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{contactBankReport}]]></subreportExpression>
+			</subreport>
+		</band>
+		<band height="55" splitType="Stretch">
+			<elementGroup>
+				<subreport isUsingCache="false" runToBottom="false">
+					<reportElement uuid="f49dd108-e9b3-439f-9fc9-b6cd1ae179c8" x="0" y="20" width="555" height="30" isRemoveLineWhenBlank="true"/>
+					<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource($P{aboNatfluList})]]></dataSourceExpression>
+					<subreportExpression><![CDATA[$P{natureFluxReport}]]></subreportExpression>
+				</subreport>
+			</elementGroup>
+		</band>
+		<band height="53" splitType="Stretch">
+			<subreport isUsingCache="false" runToBottom="false">
+				<reportElement uuid="51960ed9-e9c5-44db-a606-2cdb242341d7" x="0" y="10" width="555" height="40" isRemoveLineWhenBlank="true"/>
+				<subreportParameter name="date">
+					<subreportParameterExpression><![CDATA[$P{date}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="myDateFormat">
+					<subreportParameterExpression><![CDATA[$P{myDateFormat}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="bean">
+					<subreportParameterExpression><![CDATA[$P{bean}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="aboete">
+					<subreportParameterExpression><![CDATA[$P{aboete}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="partenaire">
+					<subreportParameterExpression><![CDATA[$P{partenaire}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="utilisateurReport">
+					<subreportParameterExpression><![CDATA[$P{utilisateurReport}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="signataireReport">
+					<subreportParameterExpression><![CDATA[$P{signataireReport}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="signataireList">
+					<subreportParameterExpression><![CDATA[$P{signataireList}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="utilisateurList">
+					<subreportParameterExpression><![CDATA[$P{utilisateurList}]]></subreportParameterExpression>
+				</subreportParameter>
+				<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.JREmptyDataSource()]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{page2Report}]]></subreportExpression>
+			</subreport>
+			<break>
+				<reportElement uuid="d03776c1-aa1e-40ab-8939-821e7b5e9226" x="0" y="9" width="600" height="1"/>
+			</break>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="16" splitType="Stretch">
+			<textField>
+				<reportElement uuid="2f5e9ddf-bf27-4d86-9cb0-082c5eb03be8" style="Column header" x="433" y="0" width="80" height="16"/>
+				<textElement textAlignment="Right">
+					<font size="6" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement uuid="092b722a-f822-40d8-9344-e1d456953d57" style="Column header" x="513" y="0" width="40" height="16"/>
+				<textElement>
+					<font size="6" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+</jasperReport>
