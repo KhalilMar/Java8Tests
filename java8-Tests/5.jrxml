@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="signataire" pageWidth="555" pageHeight="802" columnWidth="555" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="06c98480-6721-46d2-9196-ca6d2879a459">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<property name="ireport.zoom" value="1.1"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="label" fontName="Arial" fontSize="11" isBold="true"/>
+	<style name="StyleTableau">
+		<pen lineColor="#000000"/>
+		<box>
+			<topPen lineWidth="1.0"/>
+			<leftPen lineWidth="1.0"/>
+			<bottomPen lineWidth="1.0"/>
+			<rightPen lineWidth="1.0"/>
+		</box>
+	</style>
+	<style name="EnTeteTableau" style="StyleTableau" mode="Transparent" fill="Solid" hAlign="Center" vAlign="Middle" isBold="true"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="cdService" class="java.lang.String">
+		<fieldDescription><![CDATA[cdService]]></fieldDescription>
+	</field>
+	<field name="libService" class="java.lang.String">
+		<fieldDescription><![CDATA[libService]]></fieldDescription>
+	</field>
+	<field name="id_natflu" class="java.lang.String">
+		<fieldDescription><![CDATA[id_natflu]]></fieldDescription>
+	</field>
+	<field name="tx_libnatflu" class="java.lang.String">
+		<fieldDescription><![CDATA[tx_libnatflu]]></fieldDescription>
+	</field>
+	<field name="id_modprep" class="java.lang.String">
+		<fieldDescription><![CDATA[id_modprep]]></fieldDescription>
+	</field>
+	<field name="signBancaire" class="java.lang.String">
+		<fieldDescription><![CDATA[signBancaire]]></fieldDescription>
+	</field>
+	<field name="id_abotraisignb" class="java.lang.String">
+		<fieldDescription><![CDATA[id_abotraisignb]]></fieldDescription>
+	</field>
+	<field name="tx_civilct" class="java.lang.String">
+		<fieldDescription><![CDATA[tx_civilct]]></fieldDescription>
+	</field>
+	<field name="tx_nomct" class="java.lang.String">
+		<fieldDescription><![CDATA[tx_nomct]]></fieldDescription>
+	</field>
+	<field name="tx_prenomct" class="java.lang.String">
+		<fieldDescription><![CDATA[tx_prenomct]]></fieldDescription>
+	</field>
+	<field name="tx_mailct" class="java.lang.String">
+		<fieldDescription><![CDATA[tx_mailct]]></fieldDescription>
+	</field>
+	<field name="tx_telct" class="java.lang.String">
+		<fieldDescription><![CDATA[tx_telct]]></fieldDescription>
+	</field>
+	<field name="tx_faxct" class="java.lang.String">
+		<fieldDescription><![CDATA[tx_faxct]]></fieldDescription>
+	</field>
+	<field name="numSerie" class="java.lang.String">
+		<fieldDescription><![CDATA[numSerie]]></fieldDescription>
+	</field>
+	<group name="signataire">
+		<groupExpression><![CDATA[$F{id_natflu}]]></groupExpression>
+		<groupHeader>
+			<band height="20">
+				<staticText>
+					<reportElement uuid="8abd87b2-4e76-427e-b36c-365026fa5917" style="label" x="0" y="5" width="65" height="15"/>
+					<box leftPadding="2"/>
+					<textElement>
+						<paragraph leftIndent="1"/>
+					</textElement>
+					<text><![CDATA[Service: ]]></text>
+				</staticText>
+				<textField>
+					<reportElement uuid="89e620a2-6b50-4c43-acd8-6cd7888339e7" x="65" y="5" width="480" height="15"/>
+					<textElement/>
+					<textFieldExpression><![CDATA[$F{libService}]]></textFieldExpression>
+				</textField>
+			</band>
+			<band height="20">
+				<staticText>
+					<reportElement uuid="2daab011-f3a3-4b04-b6d7-7a6b8c8c0517" style="EnTeteTableau" x="0" y="0" width="65" height="20"/>
+					<textElement>
+						<paragraph leftIndent="1"/>
+					</textElement>
+					<text><![CDATA[Identifiant]]></text>
+				</staticText>
+				<staticText>
+					<reportElement uuid="68db7bb7-736d-49be-b00a-00007d9d76b2" style="EnTeteTableau" x="65" y="0" width="46" height="20"/>
+					<textElement>
+						<paragraph leftIndent="1"/>
+					</textElement>
+					<text><![CDATA[CivilitÃ©]]></text>
+				</staticText>
+				<staticText>
+					<reportElement uuid="9b2c36af-feed-4466-b700-d73bfe2c0efa" style="EnTeteTableau" x="111" y="0" width="69" height="20"/>
+					<textElement>
+						<paragraph leftIndent="1"/>
+					</textElement>
+					<text><![CDATA[Nom]]></text>
+				</staticText>
+				<staticText>
+					<reportElement uuid="fa869ba3-df1e-497f-832d-3e7d65d09f2e" style="EnTeteTableau" x="180" y="0" width="70" height="20"/>
+					<textElement>
+						<paragraph leftIndent="1"/>
+					</textElement>
+					<text><![CDATA[PrÃ©nom]]></text>
+				</staticText>
+				<staticText>
+					<reportElement uuid="c7b5c8bb-f0f5-4d1c-83e7-30bedc383145" style="EnTeteTableau" x="250" y="0" width="140" height="20"/>
+					<textElement>
+						<paragraph leftIndent="1"/>
+					</textElement>
+					<text><![CDATA[Adresse de messagerie]]></text>
+				</staticText>
+				<staticText>
+					<reportElement uuid="abcedcef-7f52-409f-8fce-2d3eeb11b953" style="EnTeteTableau" x="390" y="0" width="65" height="20"/>
+					<textElement>
+						<paragraph leftIndent="1"/>
+					</textElement>
+					<text><![CDATA[TÃ©lÃ©phone]]></text>
+				</staticText>
+				<staticText>
+					<reportElement uuid="3016aade-ccfb-4534-abf4-e595e29ca7bc" style="EnTeteTableau" x="455" y="0" width="35" height="20"/>
+					<textElement>
+						<paragraph leftIndent="1"/>
+					</textElement>
+					<text><![CDATA[Fax]]></text>
+				</staticText>
+				<staticText>
+					<reportElement uuid="e3b50508-7e21-42fa-a108-ebb7f6b9a7b0" style="EnTeteTableau" x="490" y="0" width="65" height="20"/>
+					<textElement>
+						<paragraph leftIndent="1"/>
+					</textElement>
+					<text><![CDATA[NÂ° serie]]></text>
+				</staticText>
+			</band>
+		</groupHeader>
+	</group>
+	<detail>
+		<band height="20">
+			<textField isStretchWithOverflow="true">
+				<reportElement uuid="7831b43f-11ba-4ce3-9b31-2022626bd089" style="StyleTableau" stretchType="RelativeToBandHeight" x="250" y="0" width="140" height="20" isPrintWhenDetailOverflows="true"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif"/>
+					<paragraph leftIndent="1" rightIndent="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tx_mailct}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement uuid="e9abe6f5-50cd-457c-9d8a-db18df201ef9" style="StyleTableau" stretchType="RelativeToBandHeight" x="0" y="0" width="65" height="20" isPrintWhenDetailOverflows="true"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif"/>
+					<paragraph leftIndent="1"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{id_abotraisignb}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement uuid="5ca39c17-0e86-4567-bfeb-da8b97d5f22f" style="StyleTableau" stretchType="RelativeToBandHeight" x="65" y="0" width="46" height="20" isPrintWhenDetailOverflows="true"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif"/>
+					<paragraph leftIndent="1"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tx_civilct}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement uuid="ee580662-f17b-4c6a-9566-f569e5a817c5" style="StyleTableau" stretchType="RelativeToBandHeight" x="111" y="0" width="69" height="20" isPrintWhenDetailOverflows="true"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif"/>
+					<paragraph leftIndent="1"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tx_nomct}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement uuid="7cf0bdcc-55c7-4f3f-af0d-6ed71a9f1ab5" style="StyleTableau" stretchType="RelativeToBandHeight" x="180" y="0" width="70" height="20" isPrintWhenDetailOverflows="true"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif"/>
+					<paragraph leftIndent="1"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tx_prenomct}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement uuid="9e9c158b-2693-417d-b07e-cadac5184b74" style="StyleTableau" stretchType="RelativeToBandHeight" x="390" y="0" width="65" height="20" isPrintWhenDetailOverflows="true"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif"/>
+					<paragraph leftIndent="1"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tx_telct}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement uuid="24142791-b73d-46b5-a947-eca938e9cf36" style="StyleTableau" stretchType="RelativeToBandHeight" x="455" y="0" width="35" height="20" isPrintWhenDetailOverflows="true"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif"/>
+					<paragraph leftIndent="1"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tx_faxct}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement uuid="f09250fe-2097-4961-8755-e457496bf7dc" style="StyleTableau" stretchType="RelativeToBandHeight" x="490" y="0" width="65" height="20" isPrintWhenDetailOverflows="true"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif"/>
+					<paragraph leftIndent="1"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{numSerie}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>
