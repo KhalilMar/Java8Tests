@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="natureFlux" pageWidth="555" pageHeight="802" columnWidth="555" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="06c98480-6721-46d2-9196-ca6d2879a459">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="label" fontName="Arial" fontSize="11" isBold="true"/>
+	<style name="StyleTableau">
+		<pen lineColor="#000000"/>
+		<box>
+			<topPen lineWidth="1.0"/>
+			<leftPen lineWidth="1.0"/>
+			<bottomPen lineWidth="1.0"/>
+			<rightPen lineWidth="1.0"/>
+		</box>
+	</style>
+	<style name="EnTeteTableau" style="StyleTableau" mode="Transparent" fill="Solid" hAlign="Center" vAlign="Middle" isBold="true"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="id_natflu" class="java.lang.String">
+		<fieldDescription><![CDATA[id_natflu]]></fieldDescription>
+	</field>
+	<field name="id_natflucli" class="java.lang.String">
+		<fieldDescription><![CDATA[id_natflucli]]></fieldDescription>
+	</field>
+	<field name="tx_libnatflu" class="java.lang.String">
+		<fieldDescription><![CDATA[tx_libnatflu]]></fieldDescription>
+	</field>
+	<field name="id_numcontrat" class="java.lang.String">
+		<fieldDescription><![CDATA[id_numcontrat]]></fieldDescription>
+	</field>
+	<field name="id_aboclitrait" class="java.lang.String">
+		<fieldDescription><![CDATA[id_aboclitrait]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<columnHeader>
+		<band height="40" splitType="Stretch">
+			<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.FreeLayout"/>
+			<staticText>
+				<reportElement uuid="4e950e7e-8757-40ab-960e-65fbe4599764" style="label" x="0" y="0" width="260" height="20"/>
+				<textElement/>
+				<text><![CDATA[Services souscrits]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="67be605f-88ed-49cc-ae5b-41801a958414" style="EnTeteTableau" x="0" y="20" width="249" height="20"/>
+				<textElement>
+					<font isPdfEmbedded="false"/>
+					<paragraph leftIndent="2"/>
+				</textElement>
+				<text><![CDATA[Service]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="b6f02f5b-864a-4b79-b25b-32c1a0a220a4" style="EnTeteTableau" x="249" y="20" width="151" height="20"/>
+				<textElement textAlignment="Left">
+					<paragraph leftIndent="2"/>
+				</textElement>
+				<text><![CDATA[RÃ©fÃ©rence de liaison]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="1a6291b3-e61b-4ab6-96f6-778429105d79" style="EnTeteTableau" x="400" y="20" width="112" height="20"/>
+				<textElement>
+					<paragraph leftIndent="2"/>
+				</textElement>
+				<text><![CDATA[NÂ° de contrat]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<textField isStretchWithOverflow="true">
+				<reportElement uuid="c55927d0-d10d-4f29-98fc-a44ad537dff3" style="StyleTableau" stretchType="RelativeToBandHeight" x="0" y="0" width="249" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<paragraph leftIndent="2"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{id_natflucli} + " " + $F{tx_libnatflu}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement uuid="993af00b-1709-4fe0-a677-142fdf8b6dcd" style="StyleTableau" stretchType="RelativeToBandHeight" x="249" y="0" width="151" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<paragraph leftIndent="2"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{id_aboclitrait}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement uuid="619cffcb-0035-4f6a-ae15-458cd712561a" style="StyleTableau" stretchType="RelativeToBandHeight" x="400" y="0" width="112" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<paragraph leftIndent="2"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{id_numcontrat}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>
